@@ -4,23 +4,33 @@ import java.util.ArrayList;
 
 public class Main {
     static ArrayList<String> tasks = new ArrayList<>();
-      
-      public static void main(String[] args) {
-        
+
+    public static void main(String[] args) {
+    
         System.out.println("--- Менеджер задач ---");
-        System.out.println("1. Добавить задачу");
-        System.out.println("2. Показать задачи");
-        System.out.println("3. Удалить задачу");
-        System.out.println("0. Выход");
 
 
         addTask("Купить хлеб");
+        addTask(""); // Попытка добавить пустую строку
         addTask("Полить цветы");
-        addTask("Покормить кота");
 
-        System.out.println("Все задачи добавлены!");
+        showTasks();
     }
+
     static void addTask(String task) {
+        // Проверка: если строка пустая или null, не добавляем
+        if (task == null || task.trim().isEmpty()) {
+            System.out.println("Ошибка: Нельзя добавить пустую задачу!");
+            return;
+        }
         tasks.add(task);
+        System.out.println("Добавлено: " + task);
+    }
+
+    static void showTasks() {
+        System.out.println("--- Список задач ---");
+        for (String task : tasks) {
+            System.out.println("- " + task);
+        }
     }
 }
