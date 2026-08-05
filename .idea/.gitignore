@@ -1,0 +1,24 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+
+# Файлы и папки IDE (IntelliJ IDEA)
+.idea/
+*.iml
+.vscode/
+
+# Папка сборки Gradle
+target/
+build/
+.gradle/
+
+# Папка скомпилированных файлов
+out/
+
+# Скомпилированные файлы Java
+*.class
+
+# Файлы систем
+.DS_Store
+Thumbs.db
