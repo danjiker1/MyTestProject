@@ -6,9 +6,10 @@ public class Main {
     static ArrayList<String> tasks = new ArrayList<>();
 
     public static void main(String[] args) {
+    
         System.out.println("--- Менеджер задач ---");
 
-        // Добавляем задачи
+
         addTask("Купить хлеб");
         addTask(""); // Попытка добавить пустую строку
         addTask("Полить цветы");
